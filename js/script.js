@@ -28,10 +28,10 @@ document.getElementById('Wishes_btn').addEventListener('click' , () => {
 
   console.log('Button clicked!');
     
-    let index = Math.floor(Math.random() * arrayOfhealthWishes.length)
+    let index = Math.floor(Math.random() * arrayOfFluTips.length)
     
   console.log('Номер елементу масиву:', index);
 
-    document.getElementById('p_Wishes').innerText = arrayOfhealthWishes[index];   
+    document.getElementById('p_Wishes').innerText = arrayOfFluTips[index];   
 
 })
