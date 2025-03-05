@@ -59,7 +59,13 @@ align-items: center;
 gap: 10px;
 }
 
-
+.maim-image {
+  width: 400px;
+}
+.arrow-image {
+  width: 64px;
+  height: 64px;
+}
 
 .features p {
   display: inline-block;
