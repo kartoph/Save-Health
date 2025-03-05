@@ -48,6 +48,19 @@ h2 {
   margin: 0 auto;
 }
 
+/*  Gallery  */
+
+
+.gallery {
+  display: flex;
+  flex-wrap: row;
+width: 80%;
+align-items: center;
+gap: 10px;
+}
+
+
+
 .features p {
   display: inline-block;
   vertical-align: top;
