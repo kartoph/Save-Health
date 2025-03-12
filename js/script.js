@@ -42,7 +42,7 @@ document.getElementById("btn-buy-pill").addEventListener("click", function() {
   document.getElementById("healthMessage").textContent = "Пігулки відновлені. Готові для використання!";
 });
 
-document.getElementById("healthMessage").textContent = "";
+
 
 document.getElementById("Wishes_btn").addEventListener("click", function() {
   if (countOfPills > 0) {
@@ -51,9 +51,16 @@ document.getElementById("Wishes_btn").addEventListener("click", function() {
       countOfPills--;  
       updatePillsButton();  
   } else {
-      document.getElementById("p_Wishes").textContent = "Пігулки закінчилися! Купіть нові.";
+  
+    document.getElementById("healthMessage").textContent = "Пігулки закінчилися! Купіть нові.";
+
+    
   }
+
 });
+
+
+
 
 updatePillsButton();
 
