@@ -42,8 +42,6 @@ document.getElementById("btn-buy-pill").addEventListener("click", function() {
   document.getElementById("healthMessage").textContent = "Пігулки відновлені. Готові для використання!";
 });
 
-
-
 document.getElementById("Wishes_btn").addEventListener("click", function() {
   if (countOfPills > 0) {
       const randomIndex = Math.floor(Math.random() * arrayOfFluTips.length);
@@ -51,37 +49,48 @@ document.getElementById("Wishes_btn").addEventListener("click", function() {
       countOfPills--;  
       updatePillsButton();  
   } else {
-  
     document.getElementById("healthMessage").textContent = "Пігулки закінчилися! Купіть нові.";
-
-    
   }
-
 });
-
-
-
 
 updatePillsButton();
 
-let img = 1;
 
-document.getElementById("left-arrow").addEventListener("click", () => {
-  console.log('Left arrow clicked!');
-  img--;
-  console.log(img);
-  if (img == 0) {
-    img = 3;
+
+document.addEventListener("DOMContentLoaded", () => {
+  let galleryImage = 0;
+  let arrayOfGalleryImages = ["1.jpg", "2.jpg", "3.jpg"]; // Твій масив зображень
+
+  let mainImage = document.getElementById("main-image");
+  let rightArrow = document.getElementById("right-arrow");
+  let leftArrow = document.getElementById("left-arrow");
+
+  if (!mainImage || !rightArrow || !leftArrow) {
+    console.error("Помилка: Один або кілька елементів не знайдено.");
+    return;
   }
-  document.getElementById('main-image').setAttribute('src', `img/${img}.jpg`);
+
+  mainImage.setAttribute('src', `img/${arrayOfGalleryImages[galleryImage]}`);
+
+  rightArrow.addEventListener('click', () => {
+    galleryImage++;
+    if (galleryImage === arrayOfGalleryImages.length) galleryImage = 0;
+    mainImage.setAttribute('src', `img/${arrayOfGalleryImages[galleryImage]}`);
+  });
+
+  leftArrow.addEventListener('click', () => {
+    galleryImage--;
+    if (galleryImage < 0) galleryImage = arrayOfGalleryImages.length - 1;
+    mainImage.setAttribute('src', `img/${arrayOfGalleryImages[galleryImage]}`);
+  });
 });
 
-document.getElementById("right-arrow").addEventListener("click", () => {
-  console.log('Right arrow clicked!');
-  img++;
-  console.log(img);
-  if (img == 4) {
-    img = 1;
-  }
-  document.getElementById('main-image').setAttribute('src', `img/${img}.jpg`);
-});
+function amin(img) {
+  const mainImage = document.getElementById('main-image');
+  mainImage.style.opacity = '0'; // Почати з прозорості
+  setTimeout(() => {
+      mainImage.setAttribute('src', `img/$.jpg`);
+      mainImage.style.opacity = '1'; // Показати зображення
+  }, 300); // Час анімації має співпадати з transition у CSS
+}
+
