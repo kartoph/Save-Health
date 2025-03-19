@@ -94,3 +94,76 @@ function amin(img) {
   }, 300); // Час анімації має співпадати з transition у CSS
 }
 
+//робота з об'єктами
+
+const arrayOfVitaminObjests = [
+  {
+    "id": 1,
+    "title": "Вітамін C",
+    "photo": "",
+    "description": "Вітамін C підтримує імунітет, зміцнює судини, зменшує ризик серцевих захворювань, покращує здоров'я шкіри, сприяє засвоєнню заліза.",
+    "rating": "",
+    "useful":"",
+  },
+  {
+    "id": 2,
+    "title": "Вітамін D3",
+    "photo": "",
+    "description": "Вітамін D3 підтримує здоров'я кісток, зубів, м'язів, нервової системи, підтримує імунітет, зменшує ризик депресії.",
+    "rating": "",
+    "useful":"",
+  },
+  {
+    "id": 3,
+    "title": "Вітамін E",
+    "photo": "",
+    "description": "Вітамін E є антиоксидантом, підтримує здоров'я шкіри, зміцнює імунітет, покращує здоров'я очей, сприяє засвоєнню вітамінів A, D, K.",
+    "rating": "",
+    "useful":"",
+  },
+  {
+    "id": 4,
+    "title": "Вітамін B12",
+    "photo": "",
+    "description": "Вітамін B12 підтримує нормальну роботу нервової системи, підтримує здоров'я крові, покращує пам'ять, зміцнює імунітет.",
+    "rating": "",
+    "useful":"",
+  },
+  {
+    "id": 5,
+    "title": "Вітамін A",
+    "photo": "",
+    "description": "Вітамін A підтримує здоров'я очей, шкіри, зубів, кісток, підтримує імунітет, зміцнює судини.",
+    "rating": "",
+    "useful":"",
+  },
+  {
+    "id": 6,
+    "title": "Вітамін K2",
+    "photo": "",
+    "description": "Вітамін K2 підтримує здоров'я кісток, зубів, судин, підтримує нормальний обмін кальцію, зменшує ризик серцевих захворювань.",
+    "rating": "",
+    "useful":"",
+  },
+  {
+    "id": 7,
+    "title": "Вітамін B6",
+    "photo": "",
+    "description": "Вітамін B6 підтримує нормальну роботу нервової системи, підтримує здоров'я шкіри, волосся, нігтів, покращує настрій.",
+    "rating": "",
+    "useful":"",
+  },
+]
+
+//console.log(arrayOfVitaminObjests)
+
+arrayOfVitaminObjests.forEach((item) => {
+  console.log(item)
+
+  let divVitamin = document.createElement('div')
+  divVitamin.classList.add('vitamin')
+  divVitamin.innerText = item.title
+
+  document.getElementById('p-vitamins').appendChild(divVitamin)
+})
+

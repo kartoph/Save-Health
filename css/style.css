@@ -164,3 +164,22 @@ cursor: pointer;
 .main-image {
   animation: fadeIn 1s ease-in-out;
 }
+
+/* VITAMINS */
+
+#p-vitamin{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.vitamin{
+  border: #999999 1px solid;
+  box-shadow: 10px 10px 20px #c4c4c4;
+  padding: 10px;
+  width: 100px;
+  height: 150px;
+
+}
