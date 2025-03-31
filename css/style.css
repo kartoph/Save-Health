@@ -179,7 +179,32 @@ cursor: pointer;
   border: #999999 1px solid;
   box-shadow: 10px 10px 20px #c4c4c4;
   padding: 10px;
-  width: 100px;
-  height: 150px;
+  width: 200px;
+  min-height: 300px;
+text-align: center;
+}
 
+.vitamin p:first-child{
+  text-align: right;
+  font-size: 10px;
+  color: #999999;
+
+}
+
+.vitamin img{
+  width: 128px;
+  height: 128px;
+}
+
+
+.vitamin h3{
+  text-align: center;
+  font-size: 24px;
+}
+/* descreption */
+
+.vitamin p:last-child{
+  text-align: justify;
+  font-size: 18px;
+  color: #999999;
 }
