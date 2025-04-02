@@ -176,8 +176,9 @@ cursor: pointer;
 }
 
 .vitamin{
+  display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between; /* Ensure content is spaced out */
   align-items: center;
   border: #999999 1px solid;
   border-radius: 10px;
@@ -185,16 +186,32 @@ cursor: pointer;
   padding: 10px;
   width: 45%;
   min-height: 300px;
-text-align: center;
+  text-align: center;
+  position: relative; /* Enable positioning for child elements */
 }
 
 .vitamin div{
-  margin-top: auto;
+  margin-top: auto; /* Push this section to the bottom */
   width: 100%;
 }
 
 .vitamin div>p:first-child{
 text-align: center;
+}
+
+.vitamin div > p {
+  margin: 5px 0; /* Add spacing between paragraphs */
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.vitamin div > p:first-child {
+  font-size: 16px; /* Adjust font size for the rating */
+}
+
+.vitamin div > p:last-child {
+  color: #666; /* Optional: Add a subtle color for the type */
 }
 
 .vitamin p:first-child{
@@ -210,12 +227,13 @@ text-align: center;
 }
 
 .vitamin img[alt="vitamin-scheme"] {
-  object-fit: cover; /* Ensure the image fits within the dimensions */
+  width: 100%; /* Ensure the image fills the full width of the container */
+  height: 300px; /* Set a fixed height */
+  object-fit: contain; /* Scale the image proportionally to fit within the container */
+  object-position: center; /* Center the image within the container */
   border: 1px solid #ccc; /* Optional: Add a border for better visibility */
   border-radius: 5px; /* Optional: Add rounded corners */
-  object-fit: cover;
 }
-
 
 .vitamin h3{
   text-align: center;
