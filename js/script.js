@@ -102,30 +102,34 @@ const arrayOfVitaminObjests = [
     "title": "Вітамін C",
     "photo": "vitamins/vitamin-c.png",
     "description": "Вітамін C підтримує імунітет, зміцнює судини, зменшує ризик серцевих захворювань, покращує здоров'я шкіри, сприяє засвоєнню заліза.",
+    "scheme": "vitamins/c-vitamin-scheme.png",
     "rating": 3,
-"type": "water-soluble",
+  "type": "water-soluble",
   },
   {
     "id": 2,
     "title": "Вітамін D3",
     "photo": "vitamins/vitamin-d3.png",
     "description": "Вітамін D3 підтримує здоров'я кісток, зубів, м'язів, нервової системи, підтримує імунітет, зменшує ризик депресії.",
+    "scheme": "vitamins/d3-vitamin-scheme.jpg",
     "rating": 5,
-"type": "fat-soluble",
+  "type": "fat-soluble",
   },
   {
     "id": 3,
     "title": "Вітамін E",
     "photo": "vitamins/vitamin-e.png",
     "description": "Вітамін E є антиоксидантом, підтримує здоров'я шкіри, зміцнює імунітет, покращує здоров'я очей, сприяє засвоєнню вітамінів A, D, K.",
+    "scheme": "vitamins/e-vitamin-scheme.png",
     "rating": 4,
-"type": "fat-soluble",
+  "type": "fat-soluble",
   },
   {
     "id": 4,
     "title": "Вітамін B12",
     "photo": "vitamins/vitamin-b12.png",
     "description": "Вітамін B12 підтримує нормальну роботу нервової системи, підтримує здоров'я крові, покращує пам'ять, зміцнює імунітет.",
+    "scheme": "vitamins/scheme-b12.png",
     "rating": 3,
 "type": "water-soluble",
   },
@@ -134,6 +138,7 @@ const arrayOfVitaminObjests = [
     "title": "Вітамін A",
     "photo": "vitamins/vitamin-a.png",
     "description": "Вітамін A підтримує здоров'я очей, шкіри, зубів, кісток, підтримує імунітет, зміцнює судини.",
+    "scheme": "vitamins/a-vitamin-scheme.png",
     "rating": 5,
 "type": "fat-soluble",
   },
@@ -142,14 +147,16 @@ const arrayOfVitaminObjests = [
     "title": "Вітамін K2",
     "photo": "vitamins/vitamin-k2.png",
     "description": "Вітамін K2 підтримує здоров'я кісток, зубів, судин, підтримує нормальний обмін кальцію, зменшує ризик серцевих захворювань.",
+    "scheme": "vitamins/k2-vitamin-scheme.png",
     "rating": 5,
-"type": "fat-soluble",
+    "type": "fat-soluble",
   },
   {
     "id": 7,
     "title": "Вітамін B6",
     "photo": "vitamins/vitamin-b6.png",
     "description": "Вітамін B6 підтримує нормальну роботу нервової системи, підтримує здоров'я шкіри, волосся, нігтів, покращує настрій.",
+    "scheme": "vitamins/b6-vitamin-scheme.jpg",
     "rating": 4,
     "type": "water-soluble",
   },
@@ -169,7 +176,8 @@ arrayOfVitaminObjests.forEach((item) => {
   <img src=${item.photo} alt="vitamin">
   <p>${item.description}</p>
   <div>
-  <span>${'💚'.repeat(item.rating) + '🤍'.repeat(5-item.rating)}</span>
+  <img src=${item.scheme} alt="vitamin-scheme">
+  <p>${'💚'.repeat(item.rating) + '🤍'.repeat(5-item.rating)}</p>
   <p>${item.type}</p>
   </div>`
 
