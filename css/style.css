@@ -188,7 +188,9 @@ cursor: pointer;
   min-height: 300px;
   text-align: center;
   position: relative; /* Enable positioning for child elements */
+  background-color: lavender;
 }
+
 
 .vitamin div{
   margin-top: auto; /* Push this section to the bottom */
