@@ -97,6 +97,7 @@ function amin(img) {
   }, 300); // Час анімації має співпадати з transition у CSS
 }
 
+
 //робота з об'єктами
 fetch('js/Vitamins.json')
   .then(response => response.json())
@@ -109,10 +110,12 @@ fetch('js/Vitamins.json')
       <span>${item.id}</span>
     <h3>${item.title}</h3>
     <hr>
-    <img src=${item.photo} alt="vitamin">
+    <div class="img_container">
+    <img src=${item.photo} alt="vitamin" onerror="this.onerror=null; this.src='img/No_Image_Available.jpg';">
+    </div>
     <p>${item.description}</p>
     <div>
-    <img src=${item.scheme} alt="vitamin-scheme">
+    <div class="scheme1"><img src=${item.scheme} alt="" onerror="this.onerror=null; this.src='img/No_Image_Available.jpg';"></div>
     <p>${'💚'.repeat(item.rating) + '🤍'.repeat(5-item.rating)}</p>
     <p>${item.type}</p>
     </div>`

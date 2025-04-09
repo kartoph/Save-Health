@@ -192,7 +192,7 @@ cursor: pointer;
 }
 
 
-.vitamin div{
+.vitamin div:last-child{
   margin-top: auto; /* Push this section to the bottom */
   width: 100%;
 }
@@ -223,14 +223,30 @@ text-align: center;
 
 }
 
+.img_container{
+width: 128px;
+height: 128px;
+margin: 0;
+padding: 0;
+}
+
+.scheme1{
+  margin-bottom: auto;
+}
+
+.img_container img{
+  width: 128px;
+  height: 128px;
+  transition: all 1s ease;
+  transform: scale(1);
+}
+
 .vitamin img{
   max-width: 80%;
   height: auto;
 }
 
 .vitamin img[alt="vitamin-scheme"] {
-  width: 100%; /* Ensure the image fills the full width of the container */
-  height: 300px; /* Set a fixed height */
   object-fit: contain; /* Scale the image proportionally to fit within the container */
   object-position: center; /* Center the image within the container */
   border: 1px solid #ccc; /* Optional: Add a border for better visibility */
@@ -240,6 +256,18 @@ text-align: center;
 .vitamin h3{
   text-align: center;
   font-size: 24px;
+}
+.vitamin:hover h3{
+  color: rgb(129, 129, 129);
+}
+
+.vitamin:hover .img_container img{
+  width: auto;
+  height: auto;
+  transform: translate3d(20px, 0px, 0) rotate(10deg) scale(1.2);
+  transform-origin: center;
+  transition: all 1s ease;
+  filter: drop-shadow(0 0 10px rgba(157, 157, 157, 0.5));
 }
 /* descreption */
 
